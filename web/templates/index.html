@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediksi Kelulusan Mahasiswa</title>
+</head>
+<body>
+    <h2>🎓 Prediksi Kelulusan Mahasiswa</h2>
+
+    <h3>🔢 Prediksi Manual</h3>
+    <form action="/predict_manual" method="post">
+        <label>IPK:</label><br>
+        <input type="number" name="ipk" step="0.01" required><br><br>
+
+        <label>Bobot:</label><br>
+        <input type="number" name="bobot" required><br><br>
+
+        <label>Jumlah SKS Tempuh:</label><br>
+        <input type="number" name="jumlah_sks_tempuh" required><br><br>
+
+        <input type="submit" value="Prediksi">
+    </form>
+
+    <hr>
+
+<form action="/predict_excel" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".xls,.xlsx" required>
+    <br><br>
+    <input type="submit" value="Upload dan Prediksi">
+</form>
+</body>
+</html>
